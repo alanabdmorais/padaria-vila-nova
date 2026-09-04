@@ -1,4 +1,5 @@
 ---
+slug: "{{ .File.ContentBaseName }}"
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 link_url: ""
 icone: ""

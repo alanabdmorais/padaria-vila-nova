@@ -1,4 +1,5 @@
 ---
+slug: "encomendas"
 title: "Fazer Encomenda"
 link_url: "https://wa.me/5500000000000"
 icone: "fa-solid fa-cart-shopping"

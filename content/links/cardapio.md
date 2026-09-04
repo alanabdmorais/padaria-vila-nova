@@ -1,4 +1,5 @@
 ---
+slug: "cardapio"
 title: "Ver Cardápio"
 link_url: "https://example.com/cardapio"
 icone: "fa-solid fa-book-open"

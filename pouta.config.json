@@ -1,35 +1,23 @@
 {
-  "site": {
-    "name": "Padaria Vila Nova"
-  },
   "contentTypes": [
     {
-      "name": "profile",
+      "type": "profile",
       "label": "Perfil",
-      "type": "single",
-      "path": "content/_index.md",
+      "writePath": "content/_index.md",
       "fields": [
         { "name": "title", "label": "Nome do negócio", "type": "text" },
         { "name": "bio", "label": "Biografia / descrição curta", "type": "text" },
         { "name": "foto_perfil", "label": "Foto de perfil", "type": "image" },
-        {
-          "name": "redes_sociais",
-          "label": "Redes sociais",
-          "type": "list",
-          "fields": [
-            { "name": "nome", "label": "Nome (ex: Instagram)", "type": "text" },
-            { "name": "url", "label": "URL do perfil", "type": "text" },
-            { "name": "icone", "label": "Ícone (classe Font Awesome)", "type": "text" }
-          ]
-        }
+        { "name": "instagram_url", "label": "URL do Instagram", "type": "text" },
+        { "name": "whatsapp_url", "label": "URL do WhatsApp", "type": "text" }
       ]
     },
     {
-      "name": "links",
+      "type": "links",
       "label": "Links",
-      "type": "collection",
-      "path": "content/links",
+      "writePath": "content/links/{slug}.md",
       "fields": [
+        { "name": "slug", "label": "Identificador (slug)", "type": "slug" },
         { "name": "title", "label": "Título do link", "type": "text" },
         { "name": "link_url", "label": "URL de destino", "type": "text" },
         { "name": "icone", "label": "Ícone (classe Font Awesome, opcional)", "type": "text" },

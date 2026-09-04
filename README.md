@@ -27,15 +27,14 @@ padaria-vila-nova/
 ## Editando o conteúdo
 
 - **Perfil** (`content/_index.md`): `title` (nome do negócio), `bio`
-  (descrição curta), `foto_perfil` (caminho da imagem) e `redes_sociais`
-  (lista com `nome`, `url` e `icone`, usando classes do
-  [Font Awesome](https://fontawesome.com/search?ic=free), ex:
-  `fa-brands fa-instagram`).
+  (descrição curta), `foto_perfil` (caminho da imagem), `instagram_url` e
+  `whatsapp_url`.
 - **Links** (`content/links/*.md`): cada arquivo vira um card na página, com
-  `title`, `link_url`, `icone` (opcional) e `peso` (ordem de exibição, menor
-  aparece primeiro). O campo se chama `link_url` (e não `url`) porque `url`
-  é uma palavra reservada do Hugo para sobrescrever o link da própria
-  página.
+  `slug` (identificador/nome do arquivo), `title`, `link_url`, `icone`
+  (opcional, classe do [Font Awesome](https://fontawesome.com/search?ic=free),
+  ex: `fa-solid fa-cart-shopping`) e `peso` (ordem de exibição, menor aparece
+  primeiro). O campo se chama `link_url` (e não `url`) porque `url` é uma
+  palavra reservada do Hugo para sobrescrever o link da própria página.
 
 ## Rodando localmente
 
@@ -73,12 +72,10 @@ Abra `http://localhost:1313`.
 4. Cada alteração salva no Pouta vira um commit direto neste repositório,
    o que dispara um novo deploy no Cloudflare Pages.
 
-> **Nota:** o `pouta.config.json` deste projeto foi montado com base na
-> documentação pública do Pouta (tipos de conteúdo, caminhos de escrita e
-> campos customizados). Se a interface do Pouta pedir ajustes ao conectar o
-> repositório pela primeira vez, adapte os nomes dos campos conforme a tela
-> mostrar — a estrutura de `content/` já está pronta para funcionar com
-> qualquer CMS git-based baseado em Markdown.
+> **Nota:** o `pouta.config.json` segue o esquema real do
+> [pouta-cms/cms](https://github.com/pouta-cms/cms) (`contentTypes[].type`,
+> `writePath` com o caminho completo do arquivo e token `{slug}`, campos
+> simples — sem listas de objetos aninhados).
 
 ## Personalizando
 
