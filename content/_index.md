@@ -9,8 +9,8 @@ instagram_url: ""
 whatsapp_url: ""
 status: "published"
 created_at: "2026-09-04 10:13:33"
-published_at: "2026-09-04T10:31:42.615Z"
-updated_at: "2026-09-04T10:31:42.615Z"
+published_at: "2026-09-04T10:32:14.794Z"
+updated_at: "2026-09-04T10:32:14.794Z"
 ---
 
 
