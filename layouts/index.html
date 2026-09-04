@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Params.bio }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <main class="profile-card">
+    <img class="avatar" src="{{ .Params.foto_perfil | default "/img/perfil.svg" | relURL }}" alt="{{ .Title }}">
+    <h1>{{ .Title }}</h1>
+    <p class="bio">{{ .Params.bio }}</p>
+
+    {{ if .Params.redes_sociais }}
+    <div class="social-icons">
+      {{ range .Params.redes_sociais }}
+      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .nome }}">
+        <i class="{{ .icone }}"></i>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="links">
+      {{ $linksSection := .Site.GetPage "links" }}
+      {{ if $linksSection }}
+        {{ range $linksSection.Pages.ByParam "peso" }}
+        <a class="link-card" href="{{ .Params.link_url }}" target="_blank" rel="noopener">
+          {{ if .Params.icone }}<i class="{{ .Params.icone }}"></i>{{ end }}
+          <span>{{ .Title }}</span>
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </main>
+
+  <footer>
+    <p>Feito com 💛 por Padaria Vila Nova</p>
+  </footer>
+</body>
+</html>

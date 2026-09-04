@@ -1,0 +1,7 @@
+baseURL = "/"
+languageCode = "pt-BR"
+title = "Padaria Vila Nova"
+
+[params]
+  primaryColor = "#8B4513"
+  secondaryColor = "#F5DEB3"
