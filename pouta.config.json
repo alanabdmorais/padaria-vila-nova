@@ -1,0 +1,40 @@
+{
+  "site": {
+    "name": "Padaria Vila Nova"
+  },
+  "contentTypes": [
+    {
+      "name": "profile",
+      "label": "Perfil",
+      "type": "single",
+      "path": "content/_index.md",
+      "fields": [
+        { "name": "title", "label": "Nome do negócio", "type": "text" },
+        { "name": "bio", "label": "Biografia / descrição curta", "type": "text" },
+        { "name": "foto_perfil", "label": "Foto de perfil", "type": "image" },
+        {
+          "name": "redes_sociais",
+          "label": "Redes sociais",
+          "type": "list",
+          "fields": [
+            { "name": "nome", "label": "Nome (ex: Instagram)", "type": "text" },
+            { "name": "url", "label": "URL do perfil", "type": "text" },
+            { "name": "icone", "label": "Ícone (classe Font Awesome)", "type": "text" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "label": "Links",
+      "type": "collection",
+      "path": "content/links",
+      "fields": [
+        { "name": "title", "label": "Título do link", "type": "text" },
+        { "name": "link_url", "label": "URL de destino", "type": "text" },
+        { "name": "icone", "label": "Ícone (classe Font Awesome, opcional)", "type": "text" },
+        { "name": "peso", "label": "Ordem de exibição", "type": "number" }
+      ]
+    }
+  ]
+}
