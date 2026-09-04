@@ -14,11 +14,16 @@
     <h1>{{ .Title }}</h1>
     <p class="bio">{{ .Params.bio }}</p>
 
-    {{ if .Params.redes_sociais }}
+    {{ if or .Params.instagram_url .Params.whatsapp_url }}
     <div class="social-icons">
-      {{ range .Params.redes_sociais }}
-      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .nome }}">
-        <i class="{{ .icone }}"></i>
+      {{ with .Params.instagram_url }}
+      <a href="{{ . }}" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      {{ end }}
+      {{ with .Params.whatsapp_url }}
+      <a href="{{ . }}" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
       </a>
       {{ end }}
     </div>

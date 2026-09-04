@@ -1,4 +1,5 @@
 ---
+slug: "localizacao"
 title: "Como Chegar"
 link_url: "https://maps.google.com"
 icone: "fa-solid fa-location-dot"
